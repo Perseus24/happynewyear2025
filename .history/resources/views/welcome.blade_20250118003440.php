@@ -381,7 +381,6 @@
     <script>
         let isPlaying = false;
         let i = 1;
-        // comment for committing to git
         function togglePlayMusic(){
             isPlaying = !isPlaying;
             document.getElementById('showTypeWriter').classList.remove('hidden');
