@@ -381,11 +381,6 @@
     <script>
         let isPlaying = false;
         let i = 1;
-        document.addEventListener("DOMContentLoaded", function() {
-            const carousel = new Flowbite.Carousel(document.getElementById('controls-carousel'));
-            // Optional: Set a specific interval or other settings
-            carousel.start();
-        });
         function togglePlayMusic(){
             isPlaying = !isPlaying;
             document.getElementById('showTypeWriter').classList.remove('hidden');
