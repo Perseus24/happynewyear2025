@@ -376,7 +376,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@1.4.7/dist/flowbite.min.js"></script>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </body>
     <script>
