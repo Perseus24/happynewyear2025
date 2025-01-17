@@ -367,8 +367,6 @@
 
                         <p>Pipiliin kita, araw-araw</p>
                         <p>Cy Jayyy</p><br><br>
-
-                        <p>Nandito lang ako palagi. Nandito pa rin ako. I love you with all my heart gwen. 1/17/25</p><br><br>
                         <p class="text-xs italic">Website Finished!: Monday, August 12, 2024. 2:08 AM</p>
                     </div>
                 </div>
