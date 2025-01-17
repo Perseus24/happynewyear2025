@@ -88,77 +88,77 @@
         </div>
     </body>
     <script>
-        // document.addEventListener("DOMContentLoaded", () => {
-        //     const images = @json($images);
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = @json($images);
 
-        //     const body =document.getElementById("background");
+            const body =document.getElementById("background");
         
-        //     function popRandomImage() {
-        //         const randomImage = images[Math.floor(Math.random() * images.length)];
+            function popRandomImage() {
+                const randomImage = images[Math.floor(Math.random() * images.length)];
 
-        //         const img = document.createElement('img');
-        //         img.src = randomImage;
-        //         img.classList.add('popout');
+                const img = document.createElement('img');
+                img.src = randomImage;
+                img.classList.add('popout');
 
-        //         // Randomly position the image on the screen
-        //         const maxX = window.innerWidth - 100; // Subtract image width
-        //         const maxY = window.innerHeight - 100; // Subtract image height
-        //         const randomX = Math.floor(Math.random() * maxX);
-        //         const randomY = Math.floor(Math.random() * maxY);
+                // Randomly position the image on the screen
+                const maxX = window.innerWidth - 100; // Subtract image width
+                const maxY = window.innerHeight - 100; // Subtract image height
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
 
-        //         img.style.left = randomX + 'px';
-        //         img.style.top = randomY + 'px';
-        //         img.style.zIndex = Math.floor(Math.random() * 40);
+                img.style.left = randomX + 'px';
+                img.style.top = randomY + 'px';
+                img.style.zIndex = Math.floor(Math.random() * 40);
 
-        //         console.log("img", img);
-        //         body.appendChild(img);
+                console.log("img", img);
+                body.appendChild(img);
 
-        //         setTimeout(() => {
-        //             img.classList.add('vanish');
-        //             setTimeout(() => {
-        //                 img.remove();
+                setTimeout(() => {
+                    img.classList.add('vanish');
+                    setTimeout(() => {
+                        img.remove();
                         
-        //             }, 2000)
-        //         }, 8000); 
-        //     }
+                    }, 2000)
+                }, 8000); 
+            }
 
-        //     const originalTime = new Date('2024-08-26T00:00:00');
+            const originalTime = new Date('2024-08-26T00:00:00');
 
-        //     function calculateTimeElapsed(){
-        //         const currentTime = new Date();
-        //         const timeDifference = currentTime - originalTime;
+            function calculateTimeElapsed(){
+                const currentTime = new Date();
+                const timeDifference = currentTime - originalTime;
 
-        //         const seconds = Math.floor(timeDifference / 1000);
-        //         const minutes = Math.floor(seconds / 60);
-        //         const hours = Math.floor(minutes / 60);
-        //         const days = Math.floor(hours / 24);
-        //         const months = Math.floor(days / 30);
+                const seconds = Math.floor(timeDifference / 1000);
+                const minutes = Math.floor(seconds / 60);
+                const hours = Math.floor(minutes / 60);
+                const days = Math.floor(hours / 24);
+                const months = Math.floor(days / 30);
                 
-        //         return {
-        //             months: months,
-        //             days: days % 30,
-        //             hours: hours % 24,
-        //             minutes: minutes % 60,
-        //             seconds: seconds % 60
-        //         };
-        //     }
+                return {
+                    months: months,
+                    days: days % 30,
+                    hours: hours % 24,
+                    minutes: minutes % 60,
+                    seconds: seconds % 60
+                };
+            }
 
-        //     setInterval(() => {
-        //         const time = calculateTimeElapsed();
-        //         document.getElementById("months").textContent = `${time.months}`;
-        //         document.getElementById("days").textContent = `${time.days}`;
-        //         document.getElementById("hours").textContent = `${time.hours}`;
-        //         document.getElementById("minutes").textContent = `${time.minutes}`;
-        //         document.getElementById("seconds").textContent = `${time.seconds}`;
+            setInterval(() => {
+                const time = calculateTimeElapsed();
+                document.getElementById("months").textContent = `${time.months}`;
+                document.getElementById("days").textContent = `${time.days}`;
+                document.getElementById("hours").textContent = `${time.hours}`;
+                document.getElementById("minutes").textContent = `${time.minutes}`;
+                document.getElementById("seconds").textContent = `${time.seconds}`;
 
-        //     })
+            })
 
-        //     setTimeout(() => {
-        //         setInterval(popRandomImage, 1500);
+            setTimeout(() => {
+                setInterval(popRandomImage, 1500);
                 
-        //     }, 4000);
+            }, 4000);
 
 
-        // });
+        });
     </script>
 </html>
