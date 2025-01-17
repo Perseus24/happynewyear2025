@@ -113,84 +113,84 @@
                 <div class="relative w-80 h-[80px] rounded-lg" id="controls-carousel" data-carousel="static">
                     <div class="relative overflow-hidden h-[80px] w-full rounded-lg ">
                         <div class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item="active" >
-                            <img src="{{asset('/images/del/ts-ver.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/ts-ver.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"This is me praying that this was the very first page"</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Enchanted</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9cede] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/lover.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/lover.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"I hate accidents except when we went from friends to this."</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Paper Rings</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/ts-ver.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/ts-ver.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1 w-full h-full">
                                 <h3 class="text-xs font-bold tracking-wide italic">“Little does he know, his whole world's about to change”</h3>
                                 <h3 class="text-xs tracking-wide italic flex w-full items-end justify-end">When Emma Falls in Love</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9ceec] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item>
-                            <img src="{{asset('/images/del/lover.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/lover.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"Can I go where you go? Can we always be this close forever and ever?"</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Lover</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#A5603A] to-[#6B1900] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/red.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/red.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"You'll be alright, just wait and see. No one can hurt you now"</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Safe & Sound</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#63839D] to-[#5F678B] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/labyrinth.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/labyrinth.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"Uh oh, I'm falling in love. Oh no, I'm falling in love again"</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Labyrinth</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/ts-ver.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/ts-ver.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1 w-full h-full">
                                 <h3 class="text-xs font-bold tracking-wide italic">“And I'm captivated by you, baby, like a firework show.”</h3>
                                 <h3 class="text-xs tracking-wide italic flex w-full items-end justify-end">Sparks Fly</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9cede] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/lover.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/lover.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"I don't wanna think at anything else now that I thought of you."</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Daylight</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#A5603A] to-[#6B1900] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/red-t.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/red-t.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"And meet me there tonight. Let me know that it's not all in my mind."</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Everything Has Changed</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-white to-black font-inter text-black gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/dress.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/dress.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1 ">
                                 <h3 class="text-[11px] font-bold tracking-wide italic">“Say my name and everything just stops. I don't want you like a best friend”</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Dress</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/ts-ver.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/ts-ver.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1 w-full h-full">
                                 <h3 class="text-xs font-bold tracking-wide italic">“You belong with me.”</h3>
                                 <h3 class="text-xs tracking-wide italic flex w-full items-end justify-end">You belong with Me</h3>
                             </div>
                         </div>
                         <div class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9cede] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="{{asset('/images/del/lover.png')}}" class="rounded-xl h-10">
+                            <img src="{{asset('images/del/lover.png')}}" class="rounded-xl h-10">
                             <div class="flex flex-col justify-start gap-1">
                                 <h3 class="text-xs font-bold tracking-wide italic">"I hope I never lose you, hope it never ends."</h3>
                                 <h3 class="text-xs tracking-wide italic flex justify-end">Cornelia Street</h3>
@@ -330,7 +330,7 @@
             <p>Made with love, Cy Jay Herrera</p>
         </footer>
         <audio loop  id="background-music" class="absolute bottom-0 left-0 z-10">
-            <source src="{{ asset('/images/del/august.mp3') }}" type="audio/mpeg">
+            <source src="{{ asset('images/del/august.mp3') }}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         <div class="flex  absolute bottom-10 right-10 z-50">
