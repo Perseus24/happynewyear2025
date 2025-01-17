@@ -321,7 +321,8 @@
             </div>
         </div>
         <img src="/static/images/murky.png" class="w-96 h-96 absolute bottom-0 left-0 z-0">
-        <img src="https://i.ibb.co/vz9qycF/cat.gif" class="w-40 h-40 absolute top-0 left-0 z-0">
+        <img src="https://drive.google.com/file/d/1GwWB45LM5kHU5Wn-T_jxVmrctfEdWjj9/view?usp=sharing" class="w-40 h-40 absolute top-0 left-0 z-0">
+
         <img src="/static/images/murky-top.png" class="w-52 h-52 absolute top-0 right-0 z-10">
         <img src="/static/images/flowers.png" class=" w-96 w- h-96 absolute bottom-0 right-0 z-0">
 
