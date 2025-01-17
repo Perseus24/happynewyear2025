@@ -20,6 +20,6 @@ class DashboardController extends Controller
 
     // Create a view variable to track visible images
         // $visibleImages = array_slice($images, 0, $initialVisible);
-        return view('welcome', compact( 'initialVisible' ));
+        return view('welcome', compact(  ));
     }
 }
