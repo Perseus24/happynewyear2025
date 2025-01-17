@@ -330,7 +330,7 @@
             <p>Made with love, Cy Jay Herrera</p>
         </footer>
         <audio loop  id="background-music" class="absolute bottom-0 left-0 z-10">
-            <source src="/static/images/august.mp3" type="audio/mpeg">
+            <source src="{{ asset('/static/images/august.mp3') }}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         <div class="flex  absolute bottom-10 right-10 z-50">
