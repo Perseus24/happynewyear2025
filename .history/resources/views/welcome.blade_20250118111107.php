@@ -77,6 +77,44 @@
 
         }
 
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden; /* Hide the content outside the bounds of the container */
+        }
+
+        .carousel-items {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+        }
+
+        .carousel-item {
+            min-width: 100%; /* Each item takes full width of the container */
+            flex-shrink: 0; /* Prevent shrinking */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Add any specific styles for each item here */
+        }
+
+        .carousel-prev, .carousel-next {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-prev:hover, .carousel-next:hover {
+            background-color: rgba(0, 0, 0, 0.7); /* Optional hover effect */
+        }
+
+        .carousel-indicator {
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            background-color: purple; /* Active indicator color */
+        }
+
+
+
         @keyframes heartbeat{
             0%{
                 transform: rotate(-45deg) scale(1.2)
@@ -111,132 +149,56 @@
     <body class="relative">
         <div class="flex flex-col bg-white h-screen w-auto justify-center items-center">
             <div class="flex h-[80px] w-80 absolute top-20">
-                <div class="relative w-80 h-[80px] rounded-lg" id="controls-carousel" data-carousel="static">
-                    <div class="relative overflow-hidden h-[80px] w-full rounded-lg ">
-                        <div id="carousel-item-1" class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item="active" >
-                            <img src="https://i.ibb.co/5MpqK3W/ts-ver.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"This is me praying that this was the very first page"</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Enchanted</h3>
+                <div class="relative w-80 h-[80px] rounded-lg" id="carousel-container">
+                    <!-- Carousel Wrapper -->
+                    <div class="carousel-wrapper relative overflow-hidden w-full h-full rounded-lg">
+                        <!-- Carousel Items -->
+                        <div class="carousel-items flex transition-transform duration-500 ease-in-out">
+                            <div class="carousel-item flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow w-full">
+                                <img src="https://i.ibb.co/5MpqK3W/ts-ver.webp" class="rounded-xl h-10">
+                                <div class="flex flex-col justify-start gap-1">
+                                    <h3 class="text-xs font-bold tracking-wide italic">"This is me praying that this was the very first page"</h3>
+                                    <h3 class="text-xs tracking-wide italic flex justify-end">Enchanted</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item rounded-xl flex bg-gradient-to-l from-[#fff1f3] to-[#eec9cede] font-inter text-bg_blue gap-3 px-3 py-3 shadow w-full">
+                                <img src="https://i.ibb.co/ZmskN72/lover.webp" class="rounded-xl h-10">
+                                <div class="flex flex-col justify-start gap-1">
+                                    <h3 class="text-xs font-bold tracking-wide italic">"I hate accidents except when we went from friends to this."</h3>
+                                    <h3 class="text-xs tracking-wide italic flex justify-end">Paper Rings</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow w-full" data-carousel-item >
+                                <img src="https://i.ibb.co/5MpqK3W/ts-ver.webp" class="rounded-xl h-10">
+                                <div class="flex flex-col justify-start gap-1 w-full h-full">
+                                    <h3 class="text-xs font-bold tracking-wide italic">“Little does he know, his whole world's about to change”</h3>
+                                    <h3 class="text-xs tracking-wide italic flex w-full items-end justify-end">When Emma Falls in Love</h3>
+                                </div>
                             </div>
                         </div>
-                        <div id="carousel-item-2"  class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9cede] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/ZmskN72/lover.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"I hate accidents except when we went from friends to this."</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Paper Rings</h3>
-                            </div>
-                        </div>
-                        <div id="carousel-item-3"  class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/5MpqK3W/ts-ver.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1 w-full h-full">
-                                <h3 class="text-xs font-bold tracking-wide italic">“Little does he know, his whole world's about to change”</h3>
-                                <h3 class="text-xs tracking-wide italic flex w-full items-end justify-end">When Emma Falls in Love</h3>
-                            </div>
-                        </div>
-                        <div id="carousel-item-4"  class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9ceec] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item>
-                            <img src="https://i.ibb.co/ZmskN72/lover.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"Can I go where you go? Can we always be this close forever and ever?"</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Lover</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-[#A5603A] to-[#6B1900] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/GcjQxVd/red.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"You'll be alright, just wait and see. No one can hurt you now"</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Safe & Sound</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-[#63839D] to-[#5F678B] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/jLsgXvn/labyrinth.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"Uh oh, I'm falling in love. Oh no, I'm falling in love again"</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Labyrinth</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/5MpqK3W/ts-ver.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1 w-full h-full">
-                                <h3 class="text-xs font-bold tracking-wide italic">“And I'm captivated by you, baby, like a firework show.”</h3>
-                                <h3 class="text-xs tracking-wide italic flex w-full items-end justify-end">Sparks Fly</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9cede] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/ZmskN72/lover.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"I don't wanna think at anything else now that I thought of you."</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Daylight</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-[#A5603A] to-[#6B1900] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/85YvMVH/red-t.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"And meet me there tonight. Let me know that it's not all in my mind."</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Everything Has Changed</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-white to-black font-inter text-black gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/PGx6vZY/dress.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1 ">
-                                <h3 class="text-[11px] font-bold tracking-wide italic">“Say my name and everything just stops. I don't want you like a best friend”</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Dress</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-[#924E90] to-[#38194A] font-inter text-white gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/5MpqK3W/ts-ver.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1 w-full h-full">
-                                <h3 class="text-xs font-bold tracking-wide italic">“You belong with me.”</h3>
-                                <h3 class="text-xs tracking-wide italic flex w-full items-end justify-end">You belong with Me</h3>
-                            </div>
-                        </div>
-                        <div class="flex rounded-xl bg-gradient-to-l from-[#fff1f3] to-[#eec9cede] font-inter text-bg_blue gap-3 px-3 py-3 shadow hidden duration-1000 ease-in-out w-full" data-carousel-item >
-                            <img src="https://i.ibb.co/ZmskN72/lover.webp" class="rounded-xl h-10">
-                            <div class="flex flex-col justify-start gap-1">
-                                <h3 class="text-xs font-bold tracking-wide italic">"I hope I never lose you, hope it never ends."</h3>
-                                <h3 class="text-xs tracking-wide italic flex justify-end">Cornelia Street</h3>
-                            </div>
-                        </div>
-
                     </div>
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[450px] z-30 h-[80px] ">
-                        <div class="w-full h-full relative">
-                            <!-- Slider controls -->
-                            <button id="data-carousel-prev" type="button" class=" absolute top-0 start-[-10] z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60  dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                    <svg class="w-3 h-3 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                                    </svg>
-                                    <span class="sr-only">Previous</span>
-                                </span>
-                            </button>
-                            <button id="data-carousel-next" type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60  dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                    <svg class="w-3 h-3 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                                    </svg>
-                                    <span class="sr-only">Next</span>
-                                </span>
-                            </button>
 
-                            <div class="absolute z-30 flex -translate-x-1/2 bottom-0 left-1/2 space-x-3 rtl:space-x-reverse  justify-center">
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="true" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="5"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="6"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="7"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="8"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="9"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="10"></button>
-                                <button type="button" class="w-2 h-2 rounded-full active:bg-purple-500" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="11"></button>
-                            </div>
-                        </div>
+                    <!-- Carousel Controls -->
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[450px] z-30 h-[80px] flex justify-between items-center">
+                        <button class="carousel-prev bg-black text-white p-2 rounded-full">&#8249;</button>
+                        <button class="carousel-next bg-black text-white p-2 rounded-full">&#8250;</button>
+                    </div>
+
+                    <!-- Slide Indicators -->
+                    <div class="absolute z-30 flex justify-center bottom-0 left-1/2 -translate-x-1/2 space-x-2">
+                        <button class="carousel-indicator w-2 h-2 bg-purple-500 rounded-full"></button>
+                        <button class="carousel-indicator w-2 h-2 bg-purple-500 rounded-full"></button>
+                        <button class="carousel-indicator w-2 h-2 bg-purple-500 rounded-full"></button>
+                        <button class="carousel-indicator w-2 h-2 bg-purple-500 rounded-full"></button>
+                        <button class="carousel-indicator w-2 h-2 bg-purple-500 rounded-full"></button>
+                        <button class="carousel-indicator w-2 h-2 bg-purple-500 rounded-full"></button>
+                        <button class="carousel-indicator w-2 h-2 bg-purple-500 rounded-full"></button>
+                        <!-- Add more indicators as needed -->
                     </div>
                 </div>
             </div>
+
+
             <div class="flex w-1/2 justify-center z-20">
                 <h1 id="showTypeWriter" class="text-2xl tracking-wider hidden ">
                     <span class="typewriter" id="typewriter">HIIIII BABIEEEEE</span>
@@ -451,17 +413,60 @@
                 }
             }, delay);
         }
-
-        const $prevButton = document.getElementById('data-carousel-prev');
-        const $nextButton = document.getElementById('data-carousel-next');
-
-        $prevButton.addEventListener('click', () => {
-            carousel.prev();
-        });
-
-        $nextButton.addEventListener('click', () => {
-            carousel.next();
-        });
         
+        document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const carouselItems = document.querySelector('.carousel-items');
+    
+    // Update the transform property to slide to the correct index
+    function updateCarousel() {
+        carouselItems.style.transition = 'transform 0.5s ease-in-out';
+        carouselItems.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update the active indicator
+        indicators.forEach((indicator, index) => {
+            indicator.classList.remove('active');
+            if (index === currentIndex) {
+                indicator.classList.add('active');
+            }
+        });
+    }
+
+    // Go to the next slide
+    function goToNext() {
+        if (currentIndex === items.length - 1) {
+            // When at the last slide, go to the first slide, maintaining smooth animation
+            currentIndex = 0;
+            
+            // Temporarily disable transition to reset position without animation
+            carouselItems.style.transition = 'none';
+            carouselItems.style.transform = `translateX(0%)`;
+
+            // Force a reflow to reset the layout (important for ensuring transition works properly)
+            carouselItems.offsetHeight; // Trigger reflow
+            
+            // Re-enable the transition after a small delay to avoid flickering
+            setTimeout(() => {
+                carouselItems.style.transition = 'transform 0.5s ease-in-out';
+                updateCarousel();
+            }, 20); // Short delay to reset position
+
+        } else {
+            currentIndex++;
+            updateCarousel();
+        }
+    }
+
+    // Go to the previous slide
+    function goToP
+
+
+
+
+
     </script>
 </html>
