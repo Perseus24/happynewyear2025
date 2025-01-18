@@ -19,7 +19,6 @@ export default {
                 'dark-purple': '#38194A',
                 'light-pink': '#fff1f3',
                 'light-pink-2': '#eec9cede', 
-                'light-pink-3': '#eec9ceec',
                 'brown-light': '#A5603A',
                 'brown-dark': '#6B1900',
                 'blue-light': '#63839D',
